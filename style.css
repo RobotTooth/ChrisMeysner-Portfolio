@@ -102,7 +102,7 @@ a:hover {
     transition: all 0.3 ease-in-out;
 }
 
-.menu-links {
+.menu-links a {
     display: block;
     padding: 10px;
     text-align: center;
@@ -112,17 +112,16 @@ a:hover {
     transition: all 0.3 ease-in-out;;
 }
 
+.menu-links a:hover {
+    color: grey;    
+}
+
 .menu-links li {
     list-style: none;
-    display: none;
 }
 
 .menu-links.responsive {
     max-height: 300px;
-}
-
-.menu-links.responsive li {
-    display: unset;
 }
 
 .hamburger-icon.responsive span:first-child {
