@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const openCvBtn = document.getElementById("openCvBtn");
     const linkedInBtn = document.getElementById("LinkedIn");
     const gitHubBtn = document.getElementById("GitHub");
-    // const openContacts = document.getElementById("openContacts");
+    const openContacts = document.getElementById("openContacts");
+    const arrowIcons = document.querySelectorAll('.arrow');
 
     hamburgerIcon.addEventListener("click", function() {
         menuLinks.classList.toggle("responsive");
@@ -24,10 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
         window.open(cvFilePath, '_blank');
     });
 
-    // openContacts.addEventListener("click", function() {
-    //     const contacts = '#contacts';
-    //     window.open(contacts, "_blank");
-    // });
+    openContacts.addEventListener("click", function() {
+        const contactSection = document.getElementById("contact");
+
+        if (contactSection) {
+            contactSection.scrollIntoView();
+        }
+    });
 
     linkedInBtn.addEventListener("click", function() {
         const linkedInLink = 'https://www.linkedin.com/in/chris-meysner-3856ba166/';
@@ -37,5 +41,18 @@ document.addEventListener("DOMContentLoaded", function() {
     gitHubBtn.addEventListener("click", function() {
         const gitHubLink = 'https://github.com/RobotTooth';
         window.open(gitHubLink, '_blank');
+    });
+
+    function scrollToNextSection() {
+        const currentSection = this.closest('section');
+        const nextSection = currentSection.nextElementSibling;
+
+        if (nextSection) {
+            nextSection.scrollIntoView();
+        }
+    };
+
+    arrowIcons.forEach(function(arrow) {
+        arrow.addEventListener('click', scrollToNextSection);
     });
 });
