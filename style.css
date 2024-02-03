@@ -285,6 +285,7 @@ section {
 }
 
 .about-pic {
+    max-height: 75%;
     border-radius: 2rem;
 }
 
