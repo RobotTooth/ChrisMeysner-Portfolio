@@ -72,7 +72,7 @@ a:hover {
 
 .hamburger-menu {
     position: relative;
-    display: inline;
+    display: inline-block;
 }
 
 .hamburger-icon {
@@ -100,6 +100,7 @@ a:hover {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
+    z-index: 1;
 }
 
 .menu-links a {
@@ -136,15 +137,15 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.haburger-icon span:first-child {
+.hamburger-icon span:first-child {
     transform: none;
 }
 
-.haburger-icon span:nth-child(2) {
+.hamburger-icon span:nth-child(2) {
     opacity: 1;
 }
 
-.haburger-icon span:last-child {
+.hamburger-icon span:last-child {
     transform: none;
 }
 
